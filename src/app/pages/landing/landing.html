@@ -4,7 +4,7 @@
     class="fixed top-0 inset-x-0 z-50 bg-white/95 backdrop-blur-sm border-b border-[#b7c46d]/20"
   >
     <div
-      class="flex items-center justify-between px-6 lg:px-10 h-20 w-full max-w-7xl mx-auto"
+      class="flex items-center justify-between px-4 sm:px-6 lg:px-10 h-16 sm:h-20 w-full max-w-7xl mx-auto"
     >
       <!-- Logo -->
       <a class="flex items-center gap-2 group" routerLink="/">
@@ -13,21 +13,21 @@
           width="132"
           height="44"
           alt="Gleam logo"
-          class="h-11 w-auto transition-transform group-hover:scale-[1.03]"
+          class="h-8 sm:h-10 lg:h-11 w-auto transition-transform group-hover:scale-[1.03]"
         />
       </a>
 
       <!-- Menu desktop -->
-      <nav class="hidden md:flex gap-10 text-[#b7c46d] font-semibold text-sm">
+      <nav class="hidden md:flex gap-6 lg:gap-10 text-[#b7c46d] font-semibold text-sm">
         <a href="#recursos" class="hover:opacity-80 transition">Recursos</a>
         <a href="#equipe" class="hover:opacity-80 transition">Equipe</a>
       </nav>
 
       <!-- Ações à direita -->
-      <div class="flex items-center gap-4">
+      <div class="flex items-center gap-2 sm:gap-4">
         <a
           [href]="loginUrl"
-          class="bg-[#b7c46d] text-white font-bold px-5 py-2.5 rounded-xl rounded-tr-none shadow-md hover:shadow-lg hover:bg-[#a8b65f] active:scale-[.97] transition"
+          class="bg-[#b7c46d] text-white font-bold px-3 sm:px-5 py-2 sm:py-2.5 text-xs sm:text-sm rounded-xl rounded-tr-none shadow-md hover:shadow-lg hover:bg-[#a8b65f] active:scale-[.97] transition whitespace-nowrap"
           >Entrar com Google</a
         >
       </div>
@@ -38,44 +38,44 @@
   <main class="flex-1">
     <!-- Hero -->
     <section
-      class="relative min-h-[124vh] flex flex-col justify-center bg-gradient-to-b from-white to-[#f5f7ee] py-32"
+      class="relative min-h-screen sm:min-h-[110vh] lg:min-h-[124vh] flex flex-col justify-center bg-gradient-to-b from-white to-[#f5f7ee] py-20 sm:py-28 lg:py-32 pt-24 sm:pt-32"
       id="hero-section"
     >
       <!-- Decorativos -->
       <div class="pointer-events-none absolute inset-0 opacity-40">
         <div
-          class="absolute -top-40 -left-32 w-[540px] h-[540px] bg-[#b7c46d]/10 rounded-full blur-3xl"
+          class="absolute -top-40 -left-32 w-[300px] sm:w-[440px] lg:w-[540px] h-[300px] sm:h-[440px] lg:h-[540px] bg-[#b7c46d]/10 rounded-full blur-3xl"
         ></div>
         <div
-          class="absolute -bottom-40 -right-32 w-[560px] h-[560px] bg-[#b7c46d]/10 rounded-full blur-3xl"
+          class="absolute -bottom-40 -right-32 w-[320px] sm:w-[460px] lg:w-[560px] h-[320px] sm:h-[460px] lg:h-[560px] bg-[#b7c46d]/10 rounded-full blur-3xl"
         ></div>
       </div>
 
-      <div class="mx-auto w-full max-w-[112rem] px-6 lg:px-10 relative flex-1 flex flex-col justify-center">
+      <div class="mx-auto w-full max-w-[112rem] px-4 sm:px-6 lg:px-10 relative flex-1 flex flex-col justify-center">
         <!-- Texto ocupa toda a largura -->
-        <div class="text-center mb-16">
+        <div class="text-center mb-10 sm:mb-14 lg:mb-16">
           <h1
-            class="text-[#b7c46d] font-extrabold tracking-tight text-4xl sm:text-5xl lg:text-6xl xl:text-7xl leading-tight mb-6"
+            class="text-[#b7c46d] font-extrabold tracking-tight text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tight mb-4 sm:mb-5 lg:mb-6 px-2"
           >
             Gerencie seu negócio com eficiência
           </h1>
           <p
-            class="text-[#8a9550] text-base sm:text-lg font-light leading-relaxed max-w-3xl mx-auto mb-10"
+            class="text-[#8a9550] text-sm sm:text-base lg:text-lg font-light leading-relaxed max-w-3xl mx-auto mb-8 sm:mb-9 lg:mb-10 px-4"
           >
             Centralize estoque, vendas e cadastros em uma plataforma intuitiva
             e preparada para o crescimento do seu negócio.
           </p>
           <div
-            class="flex flex-col sm:flex-row gap-4 sm:gap-5 justify-center"
+            class="flex flex-col sm:flex-row gap-3 sm:gap-4 lg:gap-5 justify-center px-4"
           >
             <a
               href="#recursos"
-              class="rounded-xl rounded-tr-none bg-[#b7c46d] text-white font-semibold px-8 py-3 shadow-md hover:shadow-lg hover:bg-[#a8b65f] active:scale-[.97] transition"
+              class="rounded-xl rounded-tr-none bg-[#b7c46d] text-white font-semibold px-6 sm:px-7 lg:px-8 py-2.5 sm:py-3 text-sm sm:text-base shadow-md hover:shadow-lg hover:bg-[#a8b65f] active:scale-[.97] transition"
               >Ver recursos</a
             >
             <a
               routerLink="/inicio"
-              class="rounded-xl rounded-tr-none border border-[#b7c46d] text-[#b7c46d] font-semibold px-8 py-3 hover:bg-[#b7c46d] hover:text-white transition"
+              class="rounded-xl rounded-tr-none border border-[#b7c46d] text-[#b7c46d] font-semibold px-6 sm:px-7 lg:px-8 py-2.5 sm:py-3 text-sm sm:text-base hover:bg-[#b7c46d] hover:text-white transition"
               >Começar agora</a
             >
           </div>
@@ -87,17 +87,17 @@
     </section>
 
     <!-- Módulos -->
-    <section id="recursos" class="py-24 bg-white relative overflow-hidden">
-      <div class="mx-auto w-full max-w-[90rem] px-6 lg:px-10">
+    <section id="recursos" class="py-16 sm:py-20 lg:py-24 bg-white relative overflow-hidden">
+      <div class="mx-auto w-full max-w-[90rem] px-4 sm:px-6 lg:px-10">
         <!-- Cabeçalho -->
-        <div class="text-center max-w-3xl mx-auto mb-20">
+        <div class="text-center max-w-3xl mx-auto mb-14 sm:mb-16 lg:mb-20">
           <h2
-            class="text-3xl md:text-5xl font-extrabold text-[#b7c46d] tracking-tight"
+            class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-[#b7c46d] tracking-tight px-2"
           >
             Nossos módulos
           </h2>
           <p
-            class="mt-4 text-[#8a9550] max-w-2xl mx-auto text-sm sm:text-base leading-relaxed"
+            class="mt-3 sm:mt-4 text-[#8a9550] max-w-2xl mx-auto text-sm sm:text-base leading-relaxed px-4"
           >
             Cada parte do sistema foi pensada para tornar sua operação mais
             simples, rápida e escalável.
@@ -105,40 +105,40 @@
         </div>
 
         <!-- Lista de módulos -->
-        <div class="grid gap-y-32">
+        <div class="grid gap-y-20 sm:gap-y-24 lg:gap-y-32">
           <!-- Módulo Início -->
-          <div class="grid lg:grid-cols-2 gap-12 items-center">
-            <div class="order-2 lg:order-1 text-center lg:text-left">
+          <div class="grid lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-12 items-center">
+            <div class="order-2 lg:order-1 text-center lg:text-left px-4 sm:px-0">
               <span
-                class="inline-block text-xs tracking-widest font-semibold text-[#b7c46d]/80 mb-3 uppercase"
+                class="inline-block text-xs tracking-widest font-semibold text-[#b7c46d]/80 mb-2 sm:mb-3 uppercase"
                 >Visão Geral</span
               >
-              <h3 class="text-2xl md:text-3xl font-bold text-[#b7c46d] mb-5">
+              <h3 class="text-xl sm:text-2xl md:text-3xl font-bold text-[#b7c46d] mb-4 sm:mb-5">
                 Módulo Início
               </h3>
               <p
-                class="text-sm sm:text-base text-gray-600 leading-relaxed mb-6"
+                class="text-sm sm:text-base text-gray-600 leading-relaxed mb-5 sm:mb-6"
               >
                 Painel inicial com visão consolidada de desempenho, métricas e
                 atalhos estratégicos para agilizar decisões diárias.
               </p>
               <ul class="text-left inline-grid gap-2 text-[#8a9550] text-sm">
                 <li class="flex items-start gap-2">
-                  <span class="mt-1 w-2 h-2 rounded-full bg-[#b7c46d]"></span
+                  <span class="mt-1 w-2 h-2 rounded-full bg-[#b7c46d] flex-shrink-0"></span
                   >Resumo rápido de vendas e estoque.
                 </li>
                 <li class="flex items-start gap-2">
-                  <span class="mt-1 w-2 h-2 rounded-full bg-[#b7c46d]"></span
+                  <span class="mt-1 w-2 h-2 rounded-full bg-[#b7c46d] flex-shrink-0"></span
                   >Indicadores de lucro e performance.
                 </li>
                 <li class="flex items-start gap-2">
-                  <span class="mt-1 w-2 h-2 rounded-full bg-[#b7c46d]"></span
+                  <span class="mt-1 w-2 h-2 rounded-full bg-[#b7c46d] flex-shrink-0"></span
                   >Atalhos para módulos críticos.
                 </li>
               </ul>
             </div>
             <div
-              class="order-1 lg:order-2 relative group max-w-xl mx-auto w-full"
+              class="order-1 lg:order-2 relative group max-w-xl mx-auto w-full px-4 sm:px-0"
             >
               <figure
                 class="relative rounded-2xl overflow-hidden shadow-2xl ring-1 ring-[#b7c46d]/20 bg-white transition-transform duration-700 group-hover:scale-[1.015]"
@@ -155,8 +155,8 @@
           </div>
 
           <!-- Módulo Inventário -->
-          <div class="grid lg:grid-cols-2 gap-12 items-center">
-            <div class="relative group max-w-xl mx-auto w-full">
+          <div class="grid lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-12 items-center">
+            <div class="relative group max-w-xl mx-auto w-full px-4 sm:px-0">
               <figure
                 class="relative rounded-2xl overflow-hidden shadow-2xl ring-1 ring-[#b7c46d]/20 bg-white transition-transform duration-700 group-hover:scale-[1.015]"
               >
@@ -199,31 +199,31 @@
                 />
               </figure>
             </div>
-            <div class="text-center lg:text-left max-w-xl mx-auto">
+            <div class="text-center lg:text-left max-w-xl mx-auto px-4 sm:px-0">
               <span
-                class="inline-block text-xs tracking-widest font-semibold text-[#b7c46d]/80 mb-3 uppercase"
+                class="inline-block text-xs tracking-widest font-semibold text-[#b7c46d]/80 mb-2 sm:mb-3 uppercase"
                 >Controle</span
               >
-              <h3 class="text-2xl md:text-3xl font-bold text-[#b7c46d] mb-5">
+              <h3 class="text-xl sm:text-2xl md:text-3xl font-bold text-[#b7c46d] mb-4 sm:mb-5">
                 Módulo Inventário
               </h3>
               <p
-                class="text-sm sm:text-base text-gray-600 leading-relaxed mb-6"
+                class="text-sm sm:text-base text-gray-600 leading-relaxed mb-5 sm:mb-6"
               >
                 Controle detalhado de produtos, movimentações e níveis críticos
                 para evitar rupturas e excesso de estoque.
               </p>
               <ul class="text-left inline-grid gap-2 text-[#8a9550] text-sm">
                 <li class="flex items-start gap-2">
-                  <span class="mt-1 w-2 h-2 rounded-full bg-[#b7c46d]"></span
+                  <span class="mt-1 w-2 h-2 rounded-full bg-[#b7c46d] flex-shrink-0"></span
                   >Cadastro e edição de itens.
                 </li>
                 <li class="flex items-start gap-2">
-                  <span class="mt-1 w-2 h-2 rounded-full bg-[#b7c46d]"></span
+                  <span class="mt-1 w-2 h-2 rounded-full bg-[#b7c46d] flex-shrink-0"></span
                   >Registro rápido de entradas e saídas.
                 </li>
                 <li class="flex items-start gap-2">
-                  <span class="mt-1 w-2 h-2 rounded-full bg-[#b7c46d]"></span
+                  <span class="mt-1 w-2 h-2 rounded-full bg-[#b7c46d] flex-shrink-0"></span
                   >Visão de movimentações recentes.
                 </li>
               </ul>
@@ -231,39 +231,39 @@
           </div>
 
           <!-- Módulo Cadastros -->
-          <div class="grid lg:grid-cols-2 gap-12 items-center">
+          <div class="grid lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-12 items-center">
             <div
-              class="order-2 lg:order-1 text-center lg:text-left max-w-xl mx-auto"
+              class="order-2 lg:order-1 text-center lg:text-left max-w-xl mx-auto px-4 sm:px-0"
             >
               <span
-                class="inline-block text-xs tracking-widest font-semibold text-[#b7c46d]/80 mb-3 uppercase"
+                class="inline-block text-xs tracking-widest font-semibold text-[#b7c46d]/80 mb-2 sm:mb-3 uppercase"
                 >Relacionamentos</span
               >
-              <h3 class="text-2xl md:text-3xl font-bold text-[#b7c46d] mb-5">
+              <h3 class="text-xl sm:text-2xl md:text-3xl font-bold text-[#b7c46d] mb-4 sm:mb-5">
                 Módulo Cadastros
               </h3>
               <p
-                class="text-sm sm:text-base text-gray-600 leading-relaxed mb-6"
+                class="text-sm sm:text-base text-gray-600 leading-relaxed mb-5 sm:mb-6"
               >
                 Gestão estruturada de clientes e fornecedores para fortalecer
                 operações e negociações estratégicas.
               </p>
               <ul class="text-left inline-grid gap-2 text-[#8a9550] text-sm">
                 <li class="flex items-start gap-2">
-                  <span class="mt-1 w-2 h-2 rounded-full bg-[#b7c46d]"></span
+                  <span class="mt-1 w-2 h-2 rounded-full bg-[#b7c46d] flex-shrink-0"></span
                   >Ficha completa de clientes e fornecedores.
                 </li>
                 <li class="flex items-start gap-2">
-                  <span class="mt-1 w-2 h-2 rounded-full bg-[#b7c46d]"></span
+                  <span class="mt-1 w-2 h-2 rounded-full bg-[#b7c46d] flex-shrink-0"></span
                   >Busca rápida e filtros inteligentes.
                 </li>
                 <li class="flex items-start gap-2">
-                  <span class="mt-1 w-2 h-2 rounded-full bg-[#b7c46d]"></span
+                  <span class="mt-1 w-2 h-2 rounded-full bg-[#b7c46d] flex-shrink-0"></span
                   >Cadastro simplificado via modal.
                 </li>
               </ul>
             </div>
-            <div class="order-1 lg:order-2 relative max-w-xl mx-auto w-full">
+            <div class="order-1 lg:order-2 relative max-w-xl mx-auto w-full px-4 sm:px-0">
               <figure
                 class="relative rounded-2xl overflow-hidden shadow-2xl ring-1 ring-[#b7c46d]/20 bg-white transition-transform duration-700 group-hover:scale-[1.015]"
               >
@@ -309,8 +309,8 @@
           </div>
 
           <!-- Módulo Financeiro -->
-          <div class="grid lg:grid-cols-2 gap-12 items-center">
-            <div class="relative group max-w-xl mx-auto w-full">
+          <div class="grid lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-12 items-center">
+            <div class="relative group max-w-xl mx-auto w-full px-4 sm:px-0">
               <figure
                 class="relative rounded-2xl overflow-hidden shadow-2xl ring-1 ring-[#b7c46d]/20 bg-white transition-transform duration-700 group-hover:scale-[1.015]"
               >
@@ -323,31 +323,31 @@
                 />
               </figure>
             </div>
-            <div class="text-center lg:text-left max-w-xl mx-auto">
+            <div class="text-center lg:text-left max-w-xl mx-auto px-4 sm:px-0">
               <span
-                class="inline-block text-xs tracking-widest font-semibold text-[#b7c46d] /80 mb-3 uppercase"
+                class="inline-block text-xs tracking-widest font-semibold text-[#b7c46d] /80 mb-2 sm:mb-3 uppercase"
                 >Resultados</span
               >
-              <h3 class="text-2xl md:text-3xl font-bold text-[#b7c46d] mb-5">
+              <h3 class="text-xl sm:text-2xl md:text-3xl font-bold text-[#b7c46d] mb-4 sm:mb-5">
                 Módulo Financeiro
               </h3>
               <p
-                class="text-sm sm:text-base text-gray-600 leading-relaxed mb-6"
+                class="text-sm sm:text-base text-gray-600 leading-relaxed mb-5 sm:mb-6"
               >
                 Acompanhe vendas pendentes, recebimentos e fluxo de caixa para
                 manter a saúde financeira sob controle.
               </p>
               <ul class="text-left inline-grid gap-2 text-[#8a9550] text-sm">
                 <li class="flex items-start gap-2">
-                  <span class="mt-1 w-2 h-2 rounded-full bg-[#b7c46d]"></span
+                  <span class="mt-1 w-2 h-2 rounded-full bg-[#b7c46d] flex-shrink-0"></span
                   >Painel comparativo de vendas.
                 </li>
                 <li class="flex items-start gap-2">
-                  <span class="mt-1 w-2 h-2 rounded-full bg-[#b7c46d]"></span
+                  <span class="mt-1 w-2 h-2 rounded-full bg-[#b7c46d] flex-shrink-0"></span
                   >Classificação por status (pendente / quitada).
                 </li>
                 <li class="flex items-start gap-2">
-                  <span class="mt-1 w-2 h-2 rounded-full bg-[#b7c46d]"></span
+                  <span class="mt-1 w-2 h-2 rounded-full bg-[#b7c46d] flex-shrink-0"></span
                   >Organização temporal e previsibilidade.
                 </li>
               </ul>
@@ -370,7 +370,7 @@
     </section>
 
     <!-- Equipe -->
-    <section id="equipe" class="py-24 bg-[#f5f7ee] relative overflow-hidden">
+    <section id="equipe" class="py-16 sm:py-20 lg:py-24 bg-[#f5f7ee] relative overflow-hidden">
       <!-- Fundo sutil com padrão -->
       <div
         class="pointer-events-none absolute inset-0 opacity-[0.35] mix-blend-multiply"
@@ -384,25 +384,25 @@
         "
       ></div>
 
-      <div class="relative mx-auto max-w-[90rem] px-6 md:px-10">
+      <div class="relative mx-auto max-w-[90rem] px-4 sm:px-6 md:px-10">
         <div class="text-center max-w-2xl mx-auto">
           <span
-            class="block w-16 h-1 mx-auto bg-[#b7c46d] rounded-full mb-6"
+            class="block w-12 sm:w-16 h-1 mx-auto bg-[#b7c46d] rounded-full mb-4 sm:mb-6"
           ></span>
           <h2
-            class="text-3xl md:text-5xl font-extrabold text-[#b7c46d] tracking-tight"
+            class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-[#b7c46d] tracking-tight px-2"
           >
             Nossa equipe
           </h2>
-          <p class="mt-5 text-[#8a9550] text-sm sm:text-base leading-relaxed">
+          <p class="mt-4 sm:mt-5 text-[#8a9550] text-sm sm:text-base leading-relaxed px-4">
             Um time multidisciplinar comprometido em entregar experiência
             simples, confiável e escalável para o seu negócio.
           </p>
         </div>
 
-        <div class="mt-16 space-y-10">
+        <div class="mt-12 sm:mt-14 lg:mt-16 space-y-6 sm:space-y-8 lg:space-y-10">
           <!-- Primeira linha: 2 cards -->
-          <div class="grid gap-8 sm:grid-cols-2">
+          <div class="grid gap-6 sm:gap-8 sm:grid-cols-2">
             @for (m of membros().slice(0,2); track m.nome) {
             <app-card-pessoa
               [nome]="m.nome"
@@ -416,7 +416,7 @@
             }
           </div>
           <!-- Segunda linha: 3 cards -->
-          <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          <div class="grid gap-6 sm:gap-8 sm:grid-cols-2 lg:grid-cols-3">
             @for (m of membros().slice(2); track m.nome) {
             <app-card-pessoa
               [nome]="m.nome"
@@ -434,7 +434,7 @@
 
       <!-- Glow decorativo -->
       <div
-        class="pointer-events-none absolute -top-10 left-1/2 -translate-x-1/2 w-[600px] h-[600px] rounded-full opacity-40 blur-3xl"
+        class="pointer-events-none absolute -top-10 left-1/2 -translate-x-1/2 w-[400px] sm:w-[500px] lg:w-[600px] h-[400px] sm:h-[500px] lg:h-[600px] rounded-full opacity-40 blur-3xl"
         style="
           background: radial-gradient(
             circle at center,
@@ -449,10 +449,10 @@
   <!-- Footer -->
   <footer class="mt-auto bg-[#f5f7ee] border-t border-[#b7c46d]/20">
     <div
-      class="max-w-7xl mx-auto px-6 md:px-10 py-10 flex flex-col md:flex-row gap-6 md:gap-0 items-center justify-between text-sm"
+      class="max-w-7xl mx-auto px-4 sm:px-6 md:px-10 py-8 sm:py-10 flex flex-col md:flex-row gap-4 sm:gap-6 md:gap-0 items-center justify-between text-xs sm:text-sm"
     >
       <p class="text-[#8a9550]">Equipe Gleam.</p>
-      <div class="flex gap-6 text-[#b7c46d] font-medium">
+      <div class="flex gap-4 sm:gap-6 text-[#b7c46d] font-medium">
         <a href="#recursos" class="hover:opacity-80">Recursos</a>
         <a href="#equipe" class="hover:opacity-80">Equipe</a>
         <a routerLink="/inicio" class="hover:opacity-80">Entrar</a>

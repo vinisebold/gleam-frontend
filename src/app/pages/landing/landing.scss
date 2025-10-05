@@ -85,6 +85,25 @@ html {
   -webkit-font-smoothing: antialiased;
 }
 
+/* Responsividade dos modais flutuantes - esconder em telas menores */
+@media (max-width: 768px) {
+  #carousel-container::before,
+  #carousel-container::after {
+    width: 60px;
+  }
+}
+
+@media (max-width: 640px) {
+  #carousel-container::before,
+  #carousel-container::after {
+    width: 40px;
+  }
+  
+  .bottom-fade-overlay {
+    height: 120px !important;
+  }
+}
+
 @keyframes fade-up {
   from {
     opacity: 0;

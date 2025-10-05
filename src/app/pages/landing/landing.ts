@@ -27,7 +27,7 @@ interface Membro {
 
 @Component({
   selector: 'app-landing',
-  imports: [ NgOptimizedImage, RouterLink, CardPessoa, CarouselScroll ],
+  imports: [NgOptimizedImage, RouterLink, CardPessoa, CarouselScroll],
   templateUrl: './landing.html',
   styleUrl: './landing.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -138,5 +138,7 @@ export class Landing implements OnInit, OnDestroy {
     // listener antigo não usado
   }
 
-  private initializeCarouselScrollEffect(): void { /* deprecated: lógica movida para CarouselScroll */ }
+  private initializeCarouselScrollEffect(): void {
+    /* deprecated: lógica movida para CarouselScroll */
+  }
 }
