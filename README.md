@@ -1,6 +1,6 @@
 <div align="center">
 
-# ✨ Gleam - Sistema de Gestão de Joalheria (Backend) ✨
+# Gleam - Sistema de Gestão de Joalheria
 
 </div>
 
