@@ -1,5 +1,7 @@
 import {
   ApplicationConfig,
+  inject,
+  provideAppInitializer,
   provideBrowserGlobalErrorListeners,
   provideZoneChangeDetection,
   LOCALE_ID,
@@ -12,6 +14,8 @@ import { routes } from './app.routes';
 import { registerLocaleData } from '@angular/common';
 import localePt from '@angular/common/locales/pt';
 import { authInterceptor } from './core/interceptors/auth.interceptor';
+import { DemoModeService } from './core/demo/demo-mode.service';
+import { demoBackendInterceptor } from './core/demo/demo-backend.interceptor';
 
 registerLocaleData(localePt);
 
@@ -20,8 +24,9 @@ export const appConfig: ApplicationConfig = {
     provideBrowserGlobalErrorListeners(),
     provideZoneChangeDetection({ eventCoalescing: true }),
     provideRouter(routes, withViewTransitions({ skipInitialTransition: true })),
-    provideHttpClient(),
-    provideHttpClient(withInterceptors([authInterceptor])),
+    // Decide entre API real e modo demonstração antes da primeira navegação.
+    provideAppInitializer(() => inject(DemoModeService).detectar()),
+    provideHttpClient(withInterceptors([demoBackendInterceptor, authInterceptor])),
     provideAnimations(),
     { provide: LOCALE_ID, useValue: 'pt-BR' },
   ],

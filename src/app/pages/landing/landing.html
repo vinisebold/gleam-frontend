@@ -25,11 +25,20 @@
 
       <!-- Ações à direita -->
       <div class="flex items-center gap-2 sm:gap-4">
-        <a
-          [href]="loginUrl"
-          class="bg-[#b7c46d] text-white font-bold px-3 sm:px-5 py-2 sm:py-2.5 text-xs sm:text-sm rounded-xl rounded-tr-none shadow-md hover:shadow-lg hover:bg-[#a8b65f] active:scale-[.97] transition whitespace-nowrap"
-          >Entrar com Google</a
-        >
+        @if (demoAtivo()) {
+          <a
+            routerLink="/inicio"
+            class="bg-[#b7c46d] text-white font-bold px-3 sm:px-5 py-2 sm:py-2.5 text-xs sm:text-sm rounded-xl rounded-tr-none shadow-md hover:shadow-lg hover:bg-[#a8b65f] active:scale-[.97] transition whitespace-nowrap"
+            title="Backend indisponível: abre o sistema com dados fictícios"
+            >Entrar na demo</a
+          >
+        } @else {
+          <a
+            [href]="loginUrl"
+            class="bg-[#b7c46d] text-white font-bold px-3 sm:px-5 py-2 sm:py-2.5 text-xs sm:text-sm rounded-xl rounded-tr-none shadow-md hover:shadow-lg hover:bg-[#a8b65f] active:scale-[.97] transition whitespace-nowrap"
+            >Entrar com Google</a
+          >
+        }
       </div>
     </div>
   </header>

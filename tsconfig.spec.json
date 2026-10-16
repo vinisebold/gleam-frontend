@@ -4,6 +4,16 @@
   "extends": "./tsconfig.json",
   "compilerOptions": {
     "outDir": "./out-tsc/spec",
+    "baseUrl": "src",
+    "paths": {
+      "@app/*": ["app/*"],
+      "@core": ["app/core/index.ts"],
+      "@core/*": ["app/core/*"],
+      "@shared": ["app/shared/index.ts"],
+      "@shared/*": ["app/shared/*"],
+      "@modules/*": ["app/modules/*"],
+      "@env/*": ["environments/*"]
+    },
     "types": [
       "jasmine"
     ]
