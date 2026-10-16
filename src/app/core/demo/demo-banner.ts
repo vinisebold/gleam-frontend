@@ -1,25 +1,23 @@
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { DemoModeService } from './demo-mode.service';
 
-/** Aviso fixo exibido dentro do sistema enquanto o modo demonstração estiver ativo. */
+/** Cartão discreto na sidebar, visível só enquanto o modo demonstração estiver ativo. */
 @Component({
   selector: 'app-demo-banner',
   changeDetection: ChangeDetectionStrategy.OnPush,
+  host: { class: 'block' },
   template: `
     @if (demo.ativo()) {
       <div
         role="status"
-        class="mb-3 flex flex-wrap items-center justify-between gap-2 rounded-xl border border-[#b7c46d]/40 bg-[#f5f7ee] px-4 py-2 text-sm text-gray-700"
+        class="mx-2 mb-2 rounded-xl bg-surface-container2 px-3 py-2 text-xs text-on-surface-variant"
       >
-        <span>
-          <strong class="font-semibold text-[#7d8a3a]">Modo demonstração</strong>
-          — dados fictícios, salvos só neste navegador. Para usar a API real, inicie o backend em
-          <code class="rounded bg-white px-1">localhost:8080</code>.
-        </span>
+        <p class="font-medium">Modo demonstração</p>
+        <p class="mt-0.5 opacity-80">Dados fictícios neste navegador.</p>
         <button
           type="button"
-          (click)="restaurar()"
-          class="rounded-lg border border-[#b7c46d] px-3 py-1 font-semibold text-[#7d8a3a] transition hover:bg-[#b7c46d] hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#7d8a3a]"
+          (click)="restaurar(); $event.stopPropagation()"
+          class="mt-1 cursor-pointer underline underline-offset-2 opacity-80 transition hover:opacity-100 focus-visible:outline-2 focus-visible:outline-offset-2"
         >
           Restaurar dados
         </button>
