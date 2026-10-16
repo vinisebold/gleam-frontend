@@ -94,9 +94,14 @@
     }
   </div>
 
+  @if (!collapsed()) {
+  <app-demo-banner class="mt-auto"></app-demo-banner>
+  }
+
   <!-- Botão Retornar (inferior) -->
   <div
-    class="mt-auto p-2 flex"
+    class="p-2 flex"
+    [class.mt-auto]="collapsed()"
     [class.justify-end]="!collapsed()"
     [class.justify-center]="collapsed()"
   >

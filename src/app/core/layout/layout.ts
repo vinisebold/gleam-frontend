@@ -2,11 +2,10 @@ import { Component, inject } from '@angular/core';
 import { NavBar } from "@shared";
 import { RouterOutlet } from '@angular/router';
 import { AuthService } from '../services/auth.service';
-import { DemoBanner } from '../demo/demo-banner';
 
 @Component({
   selector: 'app-layout',
-  imports: [NavBar, RouterOutlet, DemoBanner],
+  imports: [NavBar, RouterOutlet],
   templateUrl: './layout.html',
   styleUrl: './layout.scss'
 })
