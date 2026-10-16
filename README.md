@@ -41,3 +41,30 @@
 * **🛢️ Base de Dados:** MySQL 8
 * **📦 Gestão de Dependências:** Maven
 * **📝 Utilitários:** Lombok
+
+---
+
+## 🧪 **Modo demonstração (sem backend)**
+
+O frontend funciona mesmo sem a API no ar. Ao iniciar, ele tenta alcançar o backend em `http://localhost:8080`:
+
+* **Backend respondendo:** usa a API real, com login pelo Google.
+* **Backend fora do ar:** entra no **modo demonstração**. As requisições são respondidas no próprio navegador, com dados fictícios de uma joalheria (fornecedores, clientes, peças e vendas), e o botão de login vira **"Entrar na demo"**.
+
+No modo demonstração dá para cadastrar, editar, registrar vendas, pagar parcelas e cancelar vendas. As regras seguem as do backend (prefixo do código por fornecedor, produto vendido não pode ser alterado, lucro só de vendas pagas/pendentes etc.). As alterações ficam no `localStorage` e o botão **"Restaurar dados"** volta ao estado inicial.
+
+### Como rodar
+
+```bash
+npm install
+
+# Com o backend (gleam-api) rodando em localhost:8080: usa a API real
+# Sem o backend: entra sozinho no modo demonstração
+npm start
+
+# Forçar a demonstração mesmo com o backend ligado
+# http://localhost:4200/?demo=1
+
+# Build estático que sempre usa a demonstração, sem tentar acessar a API
+npm run build:demo
+```
