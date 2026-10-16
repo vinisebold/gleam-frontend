@@ -14,6 +14,7 @@ import { RouterLink } from '@angular/router';
 import { CardPessoa } from '@app/shared/components/card-pessoa/card-pessoa';
 import { CarouselScroll } from '@app/shared/components/carousel-scroll/carousel-scroll';
 import { environment } from '@env/environment';
+import { DemoModeService } from '@app/core/demo/demo-mode.service';
 
 interface Membro {
   nome: string;
@@ -36,6 +37,8 @@ export class Landing implements OnInit, OnDestroy {
   private renderer = inject(Renderer2);
   private elementRef = inject(ElementRef);
   readonly loginUrl = `${environment.apiUrl}/../oauth2/authorization/google`;
+  /** Sem backend, o botão de login leva direto ao sistema com dados fictícios. */
+  readonly demoAtivo = inject(DemoModeService).ativo;
 
   readonly currentYear = new Date().getFullYear();
 
